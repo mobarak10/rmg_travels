@@ -1,0 +1,35 @@
+//variables styles
+@import './variables.scss';
+
+//global styles
+@import './global.scss';
+
+//icofont - brand icons
+@import '../vendor/icofont/icofont/icofont.min.css';
+
+//Bootstrap
+@import '../vendor/bootstrap-4.4.1-dist/css/bootstrap.min.css';
+
+//topbar
+@import './topbar/global.scss';
+@import './topbar/topbar.scss';
+
+//sidebar
+@import './sidebar/global.scss';
+@import './sidebar/sidebar.scss';
+
+//ui elements
+@import './ui_elements/breadcrumb.scss';
+@import './ui_elements/subheader.scss';
+@import './ui_elements/card.scss';
+@import './ui_elements/authentication.scss';
+
+//dashboard
+@import './dashboard.scss';
+@import './profile/profile.scss';
+
+//print styles
+@import './print.scss';
+
+// font-awesome
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');

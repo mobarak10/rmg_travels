@@ -1,0 +1,30 @@
+/* print media style start */
+@media print {
+    .sidebar{
+        display: none!important;
+    }
+    .content-wrapper{
+        width: 100% !important;
+    }
+    .container,.row{
+        padding: 0;
+    }
+    .body-content{
+        padding: 0;
+        background: initial;
+    }
+    .print-none{
+        display: none!important;
+    }
+    .p-print-0{
+        padding: 0!important;
+    }
+    .print-border{
+        border: 1px dashed #000;
+    }
+    .print-w-expand{
+        max-width: 100%;
+        flex-basis: 100%;
+    }
+}
+/* print media style end */

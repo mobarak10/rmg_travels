@@ -1,0 +1,23 @@
+.profile{
+    .profile-preview{
+        .avatar{
+            width: 100%;
+        }
+        .single{
+            &:not(:last-child){
+                border-bottom: 1px solid $border-color;
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+            }
+            small{
+                margin-bottom: 3px;
+                color: $text-color;
+                display: block;
+            }
+            h5{
+                font-size: 1.1rem;
+                color: $black;
+            }
+        }
+    }
+}

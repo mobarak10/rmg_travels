@@ -1,0 +1,43 @@
+.profile-update{
+    margin: 0 auto;
+    .avatar{
+        width: 150px;
+        height: 150px;
+        position: relative;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .img-uploader{
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            border-radius: 50%;
+            overflow: hidden;
+            input{
+                opacity: 0;
+            }
+            .icon{
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background-color: lighten($primary-color, 30%);
+                color: $primary-color;
+                pointer-events: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                i{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

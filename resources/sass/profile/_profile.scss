@@ -1,0 +1,93 @@
+.user-profile{
+    .card-header{
+        border-bottom: 1px solid darken($border-color, 3%);
+        color: $black;
+    }
+    .profile-aside{
+        max-width: 300px;
+        width: 100%;
+        .card{
+            .card-body{
+                ul{
+                    margin-bottom: 0px;
+                    li{
+                        &:not(:last-child){
+                            margin-bottom: 3px;
+                        }
+                        a{
+                            display: block;
+                            padding: 12px 18px;
+                            display: flex;
+                            align-items: center;
+                            transition: 0.3s ease-in;
+                            color: $text-color;
+                            border-radius: 4px;
+                            i{
+                                margin-right: 15px;
+                            }
+                            &:hover{
+                                background-color: transparentize($primary-color,.9);
+                                color: $primary-color;
+                            }
+                            &.active{
+                                background-color: transparentize($primary-color,.9);
+                                color: $primary-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .profile-content{
+        width: calc(100% - 300px);
+        .profile-update{
+            max-width: 700px;
+            width: 100%;
+            margin:0 auto;
+            .image{
+                width: 150px;
+                height: 150px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 50%;
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+        .profile-picture-update{
+            max-width: 700px;
+            width: 100%;
+            margin:0 auto;
+            .image{
+                width: 150px;
+                height: 150px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 50%;
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+        .update-password{
+            max-width: 700px;
+            width: 100%;
+            margin:0 auto;
+        }
+    }
+}
+
+@media screen and (max-width:992px){
+    .user-profile{
+        .profile-aside{
+            max-width: 100%;
+        }
+        .profile-content{
+            width: 100%;
+        }
+    }
+}

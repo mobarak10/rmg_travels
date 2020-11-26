@@ -1,0 +1,43 @@
+.profile-details{
+    nav{
+        .nav-tabs{
+            border-bottom: none;
+            a{
+                background-color: white;
+                border-radius: 0px;
+                color: $text-color;
+                margin-right: 5px;
+                border: none;
+                transition: 0.1s ease-in;
+                // position: relative;
+                // &::after{
+                //     content: "";
+                //     position: absolute;
+                //     width: 0;
+                //     height: 0;
+                //     border-width: 10px 10px 10px 10px;
+                //     border-style: solid;
+                //     border-color: transparentize($primary-color, .8) transparent transparent transparent;
+                //     left: 50%;
+                //     transform: translateX(-50%);
+                //     top:100%;
+                //     opacity: 0;
+                //     transition: 0.1s ease-in;
+                // }
+            }
+            a.active{
+                border: none;
+                background-color: transparentize($primary-color, .8);
+                color: $primary-color;
+                // &::after{
+                //     opacity: 1;
+                // }
+            }
+            a:not(.active):hover{
+                background-color: transparentize($primary-color, .98);
+            }
+        }
+    }
+}
+//Profile update
+@import './profile-details/profile_update.scss';

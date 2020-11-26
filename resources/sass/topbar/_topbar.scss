@@ -1,0 +1,209 @@
+.topbar{
+    background-color:white;
+    .topbar-brand{
+        width: 280px;
+        display: flex;
+        align-items: center;
+        padding:15px;
+        border-right: 1px solid $border-color;
+        a.initial-logo{
+            display: block;
+            max-width: 120px;
+            width: 100%;
+            img{
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+    }
+    .sidebar-toggler, .sidebar-toggler-sm{
+        background-color: lighten($primary-color, 30%);
+        padding: 8px;
+        color: $primary-color;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .topbar-menu{
+        width: calc(100% - 280px);
+        padding:15px;
+        .dropdown{
+            .dropdown-toggle{
+                width: 40px;
+                height: 40px;
+                cursor: pointer;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: lighten($primary-color, 30%);
+                margin-left: 13px;
+                transition: 0.1s ease-in;
+                i{
+                    color: $primary-color;
+                }
+                &:hover{
+                    background-color: lighten($primary-color, 25%);
+                }
+                &:active{
+                    background-color: lighten($primary-color, 20%);
+                }
+            }
+            .dropdown-menu{
+                border: none;
+                background-color: white;
+                top: calc(100% + 10px);
+                min-width: 200px;
+                .dropdown-header{
+                    padding: 40px 0;
+                    text-align:center;
+                    position: relative;
+                    background-image: url("../../images/topbar/dropdown_header.jpg");
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    p{
+                        color: white;
+                        font-size: 1.1rem;
+                        margin-bottom: 0;
+                    }
+                    span{
+                        display: inline-block;
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        background:$primary-color;
+                        color: white;
+                        padding: 8px 15px;
+                        border-radius: 4px;
+                        transform: translate(-50%, 50%);
+                    }
+                }
+                .dropdown-body{
+                    margin: 30px 0 20px 0;
+                }
+                .dropdown-item{
+                    padding:10px 20px;
+                    color: $text-color;
+                    display: flex;
+                    align-items: center;
+                    font-size: .9rem;
+                    &:active{
+                        background-color: $primary-color;
+                        color: white;
+                    }
+                    i{
+                        margin-right: 15px;
+                    }
+                }
+            }
+            &.profile{
+                .dropdown-toggle{
+                    background-color: white;
+                    img{
+                        transition: 0.3s ease-in;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+            }
+            &.notifications, &.messages{
+                .dropdown-menu{
+                    padding: 0;
+                    max-width: 330px;
+                    min-width: 330px;
+                    width: 100%;
+                    .dropdown-item{
+                        &:not(:last-child){
+                            border-bottom: 1px solid $border-color;
+                        }
+                        i{
+                            margin-right: 20px;
+                        }
+                        img{
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            margin-right: 20px;
+                        }
+                        .item-content{
+                            overflow: hidden;
+                            p{
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                margin-bottom: 0;
+                                color: $text-color;
+                            }
+                            span{
+                                font-size: .8rem;
+                                color: $gray;
+                            }
+                        }
+                    }
+                }
+            }
+            &.mobile-search-bar{
+                .dropdown-menu{
+                    min-width: 250px;
+                }
+            }
+        }
+        .dropdown-toggle::after{
+            display: none;
+        }
+    }
+    &.topbar-collapse{
+        .topbar-brand{
+            width: auto;
+            padding: 10px;
+            width: 85px;
+            .initial-logo{
+                display: none;
+            }
+            .collapse-logo{
+                display: block;
+                margin: 0 auto;
+                img{
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+}
+
+@media all and(max-width: 768px){
+    .topbar{
+        .sidebar-toggler, .sidebar-toggler-sm{
+            padding: 8px;
+            i{
+                font-size: 20px;
+            }
+        }
+        .topbar-menu{
+            .dropdown{
+                .dropdown-toggle{
+                    width: 35px;
+                    height: 35px;
+                    margin-left: 5px;
+                    i{
+                        font-size: 20px;
+                    }
+                }
+                &.notifications, &.messages{
+                    position: static;
+                    .dropdown-menu{
+                        top: 100%;
+                        right: 10px;
+                    }
+                }
+                &.mobile-search-bar{
+                    .dropdown-menu{
+                        transform: translateX(20%);
+                    }
+                }
+            }
+        }
+    }
+}

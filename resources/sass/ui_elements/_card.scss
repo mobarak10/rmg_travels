@@ -1,0 +1,10 @@
+.card{
+    .header-primary{
+        background-color: $primary-color;
+        color: white;
+    }
+    .header-primary-border{
+        border-top: 8px solid $primary-color!important;
+        background-color: transparent;
+    }
+}

@@ -1,0 +1,82 @@
+// Default resets
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 1rem;
+    font-family: 'Muli', sans-serif;
+    background-color: #f1f2f7;
+    color: $text-color;
+}
+ul{
+    list-style-type: none;
+}
+a,a:hover{
+    text-decoration: none;
+}
+i::selection{
+    background-color: transparent;
+}
+// Global classes
+.primary{
+    background-color: $primary-color;
+}
+.w-30p{
+    width: 30px;
+}
+.h-30p{
+    height: 30px;
+}
+.mb-30{
+    margin-bottom: 30px;
+}
+.my-20p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.font-s-20{
+    font-size: 20px;
+}
+.object-fit-cover{
+    object-fit: cover;
+}
+
+// Main wrapper layout
+.main-wrapper{
+    display: flex;
+    .sidebar{
+        width: 280px;
+    }
+    .content-wrapper{
+        width: calc(100% - 280px);
+        padding: 15px;
+    }
+}
+
+// Sidebar and wain wrapper expand class
+.calc-expand{
+    width: calc(100% - 85px)!important;
+}
+.shadow-lg-none{
+    box-shadow: none!important;
+}
+
+// Setting a red star in required fields
+.form-group{
+    label.required{
+        &::after{
+            content: "*";
+            color: red;
+        }
+    }
+}
+// Style for smallest table
+.smallest-table{
+    th,td{
+        font-size: 12px;
+    }
+}
